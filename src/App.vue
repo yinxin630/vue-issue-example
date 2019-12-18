@@ -3,7 +3,7 @@
         <div
             class="m-image-padding"
             v-if="aspectRatio"
-            :style="{ paddingTop: `${(1 / aspectRatio) * 100}%` }"
+            :style="{ backgroundColor: 'red' }"
         />
         <h2>2222222222</h2>
     </div>

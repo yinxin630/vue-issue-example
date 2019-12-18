@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "build:ssr": "export SSR=true && vue-cli-service build --no-clean && sed 's/<div id=app><\\/div>/<\\!--vue-ssr-outlet-->/g' dist/index.html > dist/template.html"
   },
   "dependencies": {
     "core-js": "^3.4.3",
@@ -13,6 +14,8 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-server-renderer": "^2.6.11",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-node-externals": "^1.7.2"
   }
 }
